@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorPrimaryDark">@color/black_translucent</color>
+    <color name="colorAccent">#0b3d91</color>
+
+
+    <color name="ColorNasa">#0b3d91</color>
+    <color name="White">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_translucent">#80000000</color>
+</resources>
