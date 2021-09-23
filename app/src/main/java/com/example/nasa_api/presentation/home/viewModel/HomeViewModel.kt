@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.nasa_api.api.model.NasaRepository
 import com.example.nasa_api.data.model.Apod
+import com.example.nasa_api.mechanism.Util.Utils
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -18,30 +19,13 @@ class HomeViewModel : ViewModel() {
 
     init {
         Thread(Runnable {
-            catchRangeDate()
+            loadApodList()
         }).start()
     }
 
-    private fun catchRangeDate() {
-        val finalData: Calendar? = null
-
-        val endDate = finalData?.apply {
-            this.add(Calendar.DATE, -1)
-        } ?: Calendar.getInstance()
-
-        SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).let {
-            val endRange = it.format(endDate.time)
-            val startRange = it.format(endDate.apply {
-                this.add(Calendar.DATE, -range)
-            }.time)
-
-            loadApodList(startRange, endRange)
-        }
-    }
-
-    private fun loadApodList(startDate: String, endDate: String) {
-        val nasaApiResult = NasaRepository.getApodList(startDate, endDate)
-
+    private fun loadApodList() {
+        val periodPhotos = Utils.catchRangeDate(range)
+        val nasaApiResult = NasaRepository.getApodList(periodPhotos.startDate, periodPhotos.endDate)
         nasaApiResult?.let {
             _nasaImages.postValue(it)
         }
