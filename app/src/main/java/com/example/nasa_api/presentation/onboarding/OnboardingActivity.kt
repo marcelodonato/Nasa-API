@@ -4,9 +4,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.nasa_api.R
 import com.example.nasa_api.databinding.ActivityOnboardingBinding
-import com.example.nasa_api.presentation.view.HomeActivity
+import com.example.nasa_api.presentation.home.view.HomeActivity
 
 class OnboardingActivity : AppCompatActivity() {
 

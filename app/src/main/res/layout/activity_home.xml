@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ColorNasa"
-    tools:context=".presentation.view.HomeActivity">
-
+    tools:context=".presentation.home.view.HomeActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/nasa_recyclerView"
@@ -19,6 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_home"/>
+        tools:listitem="@layout/item_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

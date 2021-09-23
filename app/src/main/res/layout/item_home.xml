@@ -21,17 +21,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-             />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/copyright"
             android:layout_width="@dimen/match_constraints"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/minor_margin"
             android:gravity="end"
             android:textColor="@color/White"
-            android:layout_marginBottom="@dimen/minor_margin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
